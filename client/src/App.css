@@ -1,0 +1,27 @@
+.datos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* espacio entre campos */
+  align-items: flex-start; /* alinea las etiquetas a la izquierda */
+}
+
+.datos label {
+  display: flex;
+  flex-direction: column; /* etiqueta arriba, input abajo */
+  font-weight: bold;
+}
+
+.datos input {
+  width: 300px; /* ancho fijo */
+  height: 30px;
+  font-size: 16px;
+  padding-left: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.datos button {
+  width: 320px;
+  height: 50px;
+  margin-top: 5px;
+}
