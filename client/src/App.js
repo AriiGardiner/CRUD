@@ -1,48 +1,17 @@
-import './App.css';
-import{ useState } from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import RegistroEmpleado from "./RegistroEmpleado";
+import PantallaEmpleados from './PantallaEmpleados';
+
 
 function App() {
-  const [nombre, setNombre]= useState("");
-  const [apellido, setApellido]= useState("");
-  const [edad, setEdad]= useState(0);
-  const [nacionalidad, setNacionalidad]= useState("");
-  const [cargo, setCargo]= useState("");
-  const mostrardatos = () => {
-    alert(nombre);
-  }
-
   return (
-    <div className="App">
-      <div className="datos">
-  <label>Nombre: <input 
-  onChange={(event)=>{
-    setNombre(event.target.value);
-  }}
-  type="text" /></label>
-  <label>Apellido: <input 
-  onChange={(event)=>{
-    setApellido(event.target.value);
-  }}
-  type="text" /></label>
-  <label>Edad: <input 
-  onChange={(event)=>{
-    setEdad(event.target.value);
-  }}
-  type="number" /></label>
-  <label>Nacionalidad: <input
-  onChange={(event)=>{
-    setNacionalidad(event.target.value);
-  }}
-  type="text" /></label>
-  <label>Cargo: <input 
-  onChange={(event)=>{
-    setCargo(event.target.value);
-  }}
-  type="text" /></label>
-  <button onClick={mostrardatos} type="">Registrar</button>
-</div>
-
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<PantallaEmpleados />} />
+        <Route path="/registro" element={<RegistroEmpleado />} />
+      </Routes>
+    </Router>
   );
 }
 

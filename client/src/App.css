@@ -1,27 +1,116 @@
-.datos {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #208cd8, #20dacd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+  width: 700px;   /* más ancho */
+  max-width: 95%; /* responsivo */
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #208cd8;
+}
+
+/* GRID en dos columnas */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* espacio entre campos */
-  align-items: flex-start; /* alinea las etiquetas a la izquierda */
+  gap: 5px;
 }
 
-.datos label {
-  display: flex;
-  flex-direction: column; /* etiqueta arriba, input abajo */
-  font-weight: bold;
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
-.datos input {
-  width: 300px; /* ancho fijo */
-  height: 30px;
+input:focus, select:focus {
+  border-color: #20b2d8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(32, 140, 216, 0.4);
+}
+
+/* Botón ocupa ancho completo */
+button {
+  grid-column: span 2;
+  background: #208cd8;
+  color: white;
   font-size: 16px;
-  padding-left: 10px;
-  border-radius: 5px;
-  margin: 5px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.datos button {
-  width: 320px;
-  height: 50px;
-  margin-top: 5px;
+button:hover {
+  background: #20b2d8;
+}
+
+.listado-wrapper {
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  max-width: 95%;
+}
+
+.buscador {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.empleado-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.empleado-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.acciones button {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
 }
