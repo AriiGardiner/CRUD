@@ -1,0 +1,146 @@
+/* Layout general */
+.layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 8px 15px; /* Reducido padding superior */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header del sidebar - más compacto y arriba */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Reducido aún más */
+  padding-bottom: 8px; /* Reducido */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-icon {
+  font-size: 24px;
+  color: #6366f1;
+  margin-right: 10px;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Sección de Gestión Empresarial - MÁS ARRIBA */
+.gestion-section {
+  margin-top: 0; /* Eliminado margen superior */
+  margin-bottom: 15px; /* Reducido */
+}
+
+.gestion-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 1px;
+  margin-bottom: 8px; /* Reducido aún más */
+  font-weight: 600;
+}
+
+/* Menu - más compacto y arriba */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 3px; /* Reducido para compactar más */
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-link .icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+/* Estado hover */
+.menu-link:hover {
+  background: #f0f0f5;
+  color: #6366f1;
+}
+
+/* Activo */
+.menu-link.active {
+  background: #6366f1;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* === Main content === */
+.main {
+  flex: 1;
+  padding: 30px;
+  background: #f9f9fb;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+}
+
+.card .number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card .info {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Estilos para checkboxes en el menú */
+.menu input[type="checkbox"] {
+  margin-right: 8px;
+}

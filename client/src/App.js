@@ -2,17 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RegistroEmpleado from "./RegistroEmpleado";
 import PantallaEmpleados from "./PantallaEmpleados";
-import Layout from "./Layout";
+import Dashboard from "./Dashboard";
 
 function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<PantallaEmpleados />} />
-          <Route path="/registro" element={<RegistroEmpleado />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/empleados" element={<PantallaEmpleados />} />
+        <Route path="/registro" element={<RegistroEmpleado />} />
+      </Routes>
     </Router>
   );
 }
