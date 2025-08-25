@@ -1,64 +1,48 @@
-/* Layout general */
+/* Layout */
 .layout {
   display: flex;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f9fafb;
 }
 
-/* === Sidebar === */
+/* Sidebar */
 .sidebar {
-  width: 240px;
+  width: 250px;
   background: #fff;
-  border-right: 1px solid #e0e0e0;
-  padding: 8px 15px; /* Reducido padding superior */
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
-/* Header del sidebar - más compacto y arriba */
 .sidebar-header {
   display: flex;
   align-items: center;
-  margin-bottom: 8px; /* Reducido aún más */
-  padding-bottom: 8px; /* Reducido */
-  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .logo-icon {
-  font-size: 24px;
+  font-size: 26px;
   color: #6366f1;
   margin-right: 10px;
 }
 
 .logo {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  color: #333;
   margin: 0;
+  color: #111827;
 }
 
 .subtitle {
   font-size: 12px;
-  color: #888;
-  margin-top: 2px;
+  color: #6b7280;
 }
 
-/* Sección de Gestión Empresarial - MÁS ARRIBA */
-.gestion-section {
-  margin-top: 0; /* Eliminado margen superior */
-  margin-bottom: 15px; /* Reducido */
-}
-
-.gestion-title {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #888;
-  letter-spacing: 1px;
-  margin-bottom: 8px; /* Reducido aún más */
-  font-weight: 600;
-}
-
-/* Menu - más compacto y arriba */
+/* Menu */
 .menu {
   list-style: none;
   padding: 0;
@@ -68,12 +52,14 @@
 .menu-link {
   display: flex;
   align-items: center;
-  padding: 8px 10px;
-  border-radius: 6px;
+  padding: 10px 14px;
+  border-radius: 8px;
   text-decoration: none;
-  color: #333;
-  margin-bottom: 3px; /* Reducido para compactar más */
-  transition: background 0.2s, color 0.2s;
+  color: #374151;
+  margin-bottom: 6px;
+  transition: 0.2s;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .menu-link .icon {
@@ -81,66 +67,71 @@
   font-size: 16px;
 }
 
-/* Estado hover */
+/* Hover y activo */
 .menu-link:hover {
-  background: #f0f0f5;
+  background: #f3f4f6;
   color: #6366f1;
 }
 
-/* Activo */
 .menu-link.active {
   background: #6366f1;
   color: #fff;
   font-weight: bold;
 }
 
-/* === Main content === */
+/* Main */
 .main {
   flex: 1;
   padding: 30px;
-  background: #f9f9fb;
 }
 
 .title {
   font-size: 28px;
-  margin-bottom: 10px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
 }
 
 .subtitle {
   font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
+  color: #6b7280;
+  margin-bottom: 25px;
 }
 
+/* Cards */
 .cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
 .card {
-  flex: 1;
   background: #fff;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
-  margin: 0 0 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #374151;
 }
 
 .card .number {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: #111827;
+  margin: 0;
 }
 
 .card .info {
   font-size: 13px;
-  color: #666;
-}
-
-/* Estilos para checkboxes en el menú */
-.menu input[type="checkbox"] {
-  margin-right: 8px;
+  color: #6b7280;
 }
